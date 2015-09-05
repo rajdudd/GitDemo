@@ -1,2 +1,30 @@
 
-You cannot create a repo on github using git bash. So You need to create branch here only. — Edit
+u cannot create a repo on github using git bash. So You need to create branch here only. — Edit
+
+
+Reverting a commit:
+
+Suppose your current Commit hash is A, which is pushed to server.
+A (Commit-hash)
+
+Case 1)
+=======
+Now you have committed something locally, Now you want to move back to commit A.
+Locally A-> B   at Server A  End_Result A
+Use : git reset --hard origin/master
+
+Case 2)
+
+Suppose your last commit is B,which may or may not be pushed to server. But you forget to change commit message or just want to add more files in commit or make certain change in file. But don't want to create a separate commit hash.
+
+Example
+Locally or Server  A->B . Want to do any or all above operation without creating new commit hash   Expected Result A->B.
+
+Use: git add * (if adding files)
+     git commit --amend -m "Files added and message changed without creating new commit hash)
+
+
+
+
+
+
